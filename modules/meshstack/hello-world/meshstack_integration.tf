@@ -130,6 +130,7 @@ resource "meshstack_building_block_definition" "this" {
     inputs = {
       name = {
         assignment_type                = "USER_INPUT"
+        display_order                  = 0
         display_name                   = "Name"
         description                    = "Who to greet."
         type                           = "STRING"
@@ -140,6 +141,7 @@ resource "meshstack_building_block_definition" "this" {
 
       greeting = {
         assignment_type        = "USER_INPUT"
+        display_order          = 1
         display_name           = "Greeting"
         description            = "Word the greeting starts with. Defaults to Hello."
         type                   = "SINGLE_SELECT"
@@ -150,6 +152,7 @@ resource "meshstack_building_block_definition" "this" {
 
       repeat = {
         assignment_type        = "USER_INPUT"
+        display_order          = 2
         display_name           = "Repeat"
         description            = "How many times the greeting is repeated, from 1 to 10. Defaults to 1."
         type                   = "INTEGER"
@@ -159,6 +162,7 @@ resource "meshstack_building_block_definition" "this" {
 
       shout = {
         assignment_type        = "USER_INPUT"
+        display_order          = 3
         display_name           = "Shout"
         description            = "Render the greeting in upper case."
         type                   = "BOOLEAN"
@@ -168,6 +172,7 @@ resource "meshstack_building_block_definition" "this" {
 
       workspace_identifier = {
         assignment_type = "WORKSPACE_IDENTIFIER"
+        display_order   = 4
         display_name    = "Workspace Identifier"
         description     = "Identifier of the workspace that ordered this building block. Injected by meshStack."
         type            = "STRING"
